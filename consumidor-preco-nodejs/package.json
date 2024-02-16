@@ -1,0 +1,14 @@
+{
+  "name": "consumidor-preco-nodejs",
+  "version": "1.0.0",
+  "description": "MicroServiço RabbitMQ - Consumidor Preço",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.3"
+  }
+}
