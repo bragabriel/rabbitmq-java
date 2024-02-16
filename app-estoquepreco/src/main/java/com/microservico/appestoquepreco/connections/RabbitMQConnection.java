@@ -1,6 +1,6 @@
 package com.microservico.appestoquepreco.connections;
 
-import com.microservico.appestoquepreco.constants.RabbitMQConstants;
+import constants.RabbitMQConstants;
 import jakarta.annotation.PostConstruct;
 import org.springframework.amqp.core.AmqpAdmin;
 import org.springframework.amqp.core.Binding;

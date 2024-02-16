@@ -1,4 +1,4 @@
-package com.microservico.appestoquepreco.constants;
+package constants;
 
 public class RabbitMQConstants {
 
