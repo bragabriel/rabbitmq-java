@@ -12,9 +12,14 @@ public class EstoqueConsumer {
 
   //Ao startar a aplicação, o RabbitMQ vai ficar em Listener esperando uma mensagem/fila
   @RabbitListener(queues = RabbitMQConstants.FILA_ESTOQUE)
-  private void consumir(EstoqueDto estoqueDto){ //Realiza a conexão e fica no aguardo das mensagens
+  private void consumidor(String mensagem) throws JsonProcessingException, InterruptedException {
+    EstoqueDto estoqueDto = new ObjectMapper().readValue(mensagem, EstoqueDto.class);
+
     System.out.println(estoqueDto.codigoProduto);
     System.out.println(estoqueDto.quantidade);
     System.out.println("------------------------------------");
+
+    //Teste para Handler de Error
+    //throw new IllegalArgumentException("Argumento inválido!");
   }
 }
