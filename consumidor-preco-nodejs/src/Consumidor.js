@@ -1,12 +1,13 @@
+require('dotenv').config();
 const amqp = require('amqplib')
 
 const fila = 'PRECO'
 
 amqp.connect({
-  host: 'localhost',
-  port: 5672,
-  username: 'admin',
-  password: 123456
+  host: process.env.RABBITMQ_HOST,
+  port: process.env.RABBITMQ_PORT,
+  username: process.env.RABBITMQ_USERNAME,
+  password: process.env.RABBITMQ_PASSWORD
 })
     .then((conexao) => {
       conexao.createChannel()
